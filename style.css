@@ -1,39 +1,8 @@
-body{
-    margin: 0;
+.centered-text {
+  text-align: center;
 }
-img{
-    max-width: 100%;
-}
-
-header{
-    background: #000;
-    color: #fff;
-    margin-top: 20px;
-}
-
-.bg-gray{
-    background: #ddd;
-}
-
-.border-left{
-    border-left: 4px red solid;
-    padding-left: 8px;
-}
-.news-item {
-    margin-left: auto !important;
-}
-
-.news-text {
-    flex: 1;
-    padding-right: 20px;
-}
-
-.news-image {
-    flex-shrink: 0;
-    margin-top: 10px; /* Added margin-top to separate images */
-    margin-left: auto;
-}
-.news-image img {
-    max-width: 100%; /* Устанавливает максимальную ширину изображения на 100% от родительского контейнера */
-    height: auto; /* Это обеспечит пропорциональное изменение размера изображения */
+.font{
+  font-family: "Victor Mono";
+  font-weight: 400;
+  font-style: normal;
 }
