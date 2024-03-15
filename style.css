@@ -1,43 +1,65 @@
-.centered-text {
+.centered-text 
+{
   text-align: center;
 }
-.font{
+.font
+{
   font-family: "Victor Mono";
-  font-weight: 400;
   font-style: normal;
 }
-.col-3 img {
+.col-3 img 
+{
   width: 100%;
   height: auto;
   display: block;
 }
-.col-3 div {
-  margin-top: 10px;
+.col-3 div 
+{
+  margin-top: 7px;
 }
-.col-3 button {
-  float: right;
-}
-.col-3 {
+.col-3 
+{
   transition: box-shadow 0.3s ease-in-out;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
-.col img:hover {
-  border: 2px solid yellow; /* Желтая обводка для изображений */
+.col-3:hover 
+{
+  border: 1px solid #f2b600;
+  border-radius: 5px;
 }
-
-
-.col-3:hover {
-  outline: 2px solid yellow;
-}
-
-.cart-button, .col-3 button {
-  background-color: #ffcc00; /* Желтый цвет фона */
-  border: none;
+.cart-button
+{
+  display: inline-block;
   padding: 10px 20px;
-  text-transform: uppercase;
+  background-color: #000;
+  border: solid #f2b600;
   font-weight: bold;
-  cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 5px;
+  border-width: 2px;
 }
-.cart-button:hover, .col-3 button:hover {
-  background-color: #f2b600; /* Темно-желтый цвет при наведении */
+.cart-button:hover, .main-button:hover
+{
+  background-color: #f2b600;
+}
+.main-button
+{
+  padding: 10px 20px;
+  background-color: #000;
+  border: solid #f2b600;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  border-width: 2px;
+  float: inline-end;
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+.price-button-container
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
