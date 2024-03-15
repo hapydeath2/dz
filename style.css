@@ -6,3 +6,38 @@
   font-weight: 400;
   font-style: normal;
 }
+.col-3 img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.col-3 div {
+  margin-top: 10px;
+}
+.col-3 button {
+  float: right;
+}
+.col-3 {
+  transition: box-shadow 0.3s ease-in-out;
+}
+.col img:hover {
+  border: 2px solid yellow; /* Желтая обводка для изображений */
+}
+
+
+.col-3:hover {
+  outline: 2px solid yellow;
+}
+
+.cart-button, .col-3 button {
+  background-color: #ffcc00; /* Желтый цвет фона */
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.cart-button:hover, .col-3 button:hover {
+  background-color: #f2b600; /* Темно-желтый цвет при наведении */
+}
