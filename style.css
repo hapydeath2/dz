@@ -19,43 +19,17 @@
 }
 .col-3 
 {
-  transition: box-shadow 0.3s ease-in-out;
+  border: 2px solid transparent;
+  border-radius: 16px;
+  transition: border-color 0.3s ease-in-out;
   padding-top: 14px;
   padding-bottom: 14px;
 }
 .col-3:hover 
 {
-  border: 1px solid #f2b600;
-  border-radius: 5px;
-}
-.cart-button
-{
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #000;
-  border: solid #f2b600;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  border-radius: 5px;
-  border-width: 2px;
-}
-.cart-button:hover, .main-button:hover
-{
-  background-color: #f2b600;
-}
-.main-button
-{
-  padding: 10px 20px;
-  background-color: #000;
-  border: solid #f2b600;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  border-radius: 5px;
-  border-width: 2px;
-  float: inline-end;
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
+  border: 2px solid #f2b600;
+  border-radius: 16px;
+  transition: .3s;
 }
 .price-button-container
 {
