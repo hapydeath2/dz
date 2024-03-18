@@ -7,17 +7,19 @@
   font-family: "Victor Mono";
   font-style: normal;
 }
-.col-3 img 
+.col-2 img 
 {
   width: 100%;
   height: auto;
-  display: block;
+  display: flex;
+  align-items: center;
+  align-content: space-around;
 }
-.col-3 div 
+.col-2 div 
 {
   margin-top: 7px;
 }
-.col-3 
+.col-2
 {
   border: 2px solid transparent;
   border-radius: 16px;
@@ -25,7 +27,7 @@
   padding-top: 14px;
   padding-bottom: 14px;
 }
-.col-3:hover 
+.col-2:hover 
 {
   border: 2px solid #f2b600;
   border-radius: 16px;
@@ -36,4 +38,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.featured-games-title {
+  text-align: start;
+  color: #ffffff; /* Пример цвета текста */
+  margin-bottom: 20px; /* Расстояние до блока с играми */
+}
+
+.container {
+  margin-top: 150px;
+  margin-left: 30px; /* Центрирование по вертикали */
 }
