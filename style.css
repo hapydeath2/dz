@@ -44,41 +44,15 @@
 }
 .icons-overlay {
   position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
+  top: 20px; /* Измените это значение, чтобы поднять или опустить блок иконок */
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  padding: 10px 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  background-color: rgba(0, 0, 0, 0.5);
+  width: 80%; /* Или другой размер, в зависимости от вашего дизайна */
+  opacity: 0; /* Сделать невидимым по умолчанию */
+  transition: opacity 0.3s ease; /* Плавное появление */
 }
 .col-2:hover .icons-overlay {
   opacity: 1;
-}
-.icon-play, .icon-info, .icon-cart {
-  margin: 0 10px;
-  color: #fff;
-}
-
-.icon-play {
-  background-image: url('img\free-icon-add-to-favorites-4989206.png');
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  background-color: #f2b600;
-}
-.icon-info {
-  background-image: url('path_to_your_icon/info_icon.png');
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-}
-.icon-cart {
-  background-image: url('path_to_your_icon/cart_icon.png');
-  width: 24px;
-  height: 24px;
-  display: inline-block;
 }
