@@ -1,40 +1,34 @@
-.centered-text 
-{
+.centered-text {
   text-align: center;
 }
-.font
-{
+.font {
   font-family: "Victor Mono";
   font-style: normal;
 }
-.col-2 img 
-{
+.col-2 img {
   width: 100%;
   height: auto;
   display: flex;
   align-items: center;
   align-content: space-around;
 }
-.col-2 div 
-{
+.col-2 div {
   margin-top: 7px;
 }
-.col-2
-{
+.col-2 {
+  position: relative;
   border: 2px solid transparent;
   border-radius: 16px;
   transition: border-color 0.3s ease-in-out;
   padding-top: 14px;
   padding-bottom: 14px;
 }
-.col-2:hover 
-{
+.col-2:hover {
   border: 2px solid #f2b600;
   border-radius: 16px;
   transition: .3s;
 }
-.price-button-container
-{
+.price-button-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,8 +38,47 @@
   color: #ffffff; /* Пример цвета текста */
   margin-bottom: 20px; /* Расстояние до блока с играми */
 }
-
 .container {
   margin-top: 150px;
   margin-left: 30px; /* Центрирование по вертикали */
+}
+.icons-overlay {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 10px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.col-2:hover .icons-overlay {
+  opacity: 1;
+}
+.icon-play, .icon-info, .icon-cart {
+  margin: 0 10px;
+  color: #fff;
+}
+
+.icon-play {
+  background-image: url('img\free-icon-add-to-favorites-4989206.png');
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-color: #f2b600;
+}
+.icon-info {
+  background-image: url('path_to_your_icon/info_icon.png');
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+}
+.icon-cart {
+  background-image: url('path_to_your_icon/cart_icon.png');
+  width: 24px;
+  height: 24px;
+  display: inline-block;
 }
