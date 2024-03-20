@@ -1,58 +1,123 @@
-.centered-text {
-  text-align: center;
+.pic {
+  transition: all 0.5s;
+  /* transform-origin: 100% 100%; */
 }
-.font {
-  font-family: "Victor Mono";
-  font-style: normal;
+
+.pic:hover {
+  transform: rotate(15deg); 
+  transform: scaleX(0.8); 
+  transform: skew(-15deg); 
+  transform: translateX(50px);
 }
-.col-2 img {
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: center;
-  align-content: space-around;
+
+.block {
+  /* background: #ddd; */
+  margin: 40px;
+  width: 500px;
 }
-.col-2 div {
-  margin-top: 7px;
+
+.flip {
+  height: 150px;
+  background-color: rgba(137, 43, 226, 0.505);
+  transition: all 1s;
 }
-.col-2 {
+
+.block:hover .flip {
+  transform: rotateY(180deg);
+}
+
+.flat {
+  transform-style: flat;
+}
+
+.preserve {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+
+  /* perspective-origin: 100% 100%; */
+}
+
+.flip-effect {
+  perspective: 1200px;
+  margin: 50px;
+}
+
+.card {
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  transition: all 1s;
   position: relative;
-  border: 2px solid transparent;
-  border-radius: 16px;
-  transition: border-color 0.3s ease-in-out;
-  padding-top: 14px;
-  padding-bottom: 14px;
 }
-.col-2:hover {
-  border: 2px solid #f2b600;
-  border-radius: 16px;
-  transition: .3s;
+
+.card:hover {
+  transform: rotateY(180deg);
 }
-.price-button-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.featured-games-title {
-  text-align: start;
-  color: #ffffff; /* Пример цвета текста */
-  margin-bottom: 20px; /* Расстояние до блока с играми */
-}
-.container {
-  margin-top: 150px;
-  margin-left: 30px; /* Центрирование по вертикали */
-}
-.icons-overlay {
+
+.card-face {
   position: absolute;
-  top: 20px; /* Измените это значение, чтобы поднять или опустить блок иконок */
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: dodgerblue;
+  color: #fff;
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
-  width: 80%; /* Или другой размер, в зависимости от вашего дизайна */
-  opacity: 0; /* Сделать невидимым по умолчанию */
-  transition: opacity 0.3s ease; /* Плавное появление */
+  align-items: center;
+  transform: rotateY(180deg);
 }
-.col-2:hover .icons-overlay {
-  opacity: 1;
+
+.front {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.couch-photo {
+  border: 1px red solid;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+}
+
+.couch img {
+  transition: all 0.5s;
+}
+
+.couch:hover img {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+
+.icons a {
+  background: greenyellow;
+  color: #000;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  display: none;
+  gap: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.couch:hover .icons {
+  display: flex;
 }
