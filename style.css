@@ -1,123 +1,142 @@
-.pic {
-  transition: all 0.5s;
-  /* transform-origin: 100% 100%; */
+/* h1::before{
+    content: "hello";
+    color: red;
 }
 
-.pic:hover {
-  transform: rotate(15deg); 
-  transform: scaleX(0.8); 
-  transform: skew(-15deg); 
-  transform: translateX(50px);
+h1::after{
+    content: "!";
+} */
+
+h1::after {
+  content: "";
+  display: block;
+  border-top: 1px #ddd solid;
+  width: 100%;
 }
 
-.block {
-  /* background: #ddd; */
-  margin: 40px;
-  width: 500px;
-}
-
-.flip {
-  height: 150px;
-  background-color: rgba(137, 43, 226, 0.505);
-  transition: all 1s;
-}
-
-.block:hover .flip {
-  transform: rotateY(180deg);
-}
-
-.flat {
-  transform-style: flat;
-}
-
-.preserve {
-  transform-style: preserve-3d;
-  perspective: 1000px;
-
-  /* perspective-origin: 100% 100%; */
-}
-
-.flip-effect {
-  perspective: 1200px;
-  margin: 50px;
-}
-
-.card {
-  width: 250px;
-  height: 250px;
-  transform-style: preserve-3d;
-  transition: all 1s;
+h1 span {
   position: relative;
 }
 
-.card:hover {
-  transform: rotateY(180deg);
-}
-
-.card-face {
+h1 span::before {
+  content: "";
+  display: block;
+  border-top: 1px red solid;
+  width: 100px;
   position: absolute;
-  top: 0;
-  left: 0;
-  backface-visibility: hidden;
+  top: 50%;
+  left: 100%;
+  margin-left: 20px;
+  transform: translateY(-50%);
 }
 
-.back {
-  background: dodgerblue;
-  color: #fff;
-  width: 100%;
-  height: 100%;
+h1 {
   display: flex;
-  justify-content: center;
   align-items: center;
-  transform: rotateY(180deg);
+  gap: 20px;
+  white-space: nowrap;
 }
 
-.front {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* Bubba */
+
+img {
+  max-width: 100%;
+  /* display: block; */
 }
 
-.couch-photo {
-  border: 1px red solid;
-  background: #000;
+.bubba {
+
+  background: rgb(129, 255, 0);
+  background: linear-gradient(
+    75deg,
+    rgba(129, 255, 0, 1) 0%,
+    rgba(34, 60, 190, 1) 46%,
+    rgba(209, 0, 141, 1) 100%
+  );
+
+
+  width: 400px;
+  position: relative;
   overflow: hidden;
-  position: relative;
 }
 
-.couch img {
-  transition: all 0.5s;
-}
-
-.couch:hover img {
-  opacity: 0.5;
-  transform: scale(1.2);
-}
-
-.icons a {
-  background: greenyellow;
-  color: #000;
-  text-decoration: none;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-}
-
-.icons {
-  display: none;
-  gap: 10px;
+.bubba .text {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  bottom: 0;
+  right: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  color: #fff;
 }
 
-.couch:hover .icons {
-  display: flex;
+.bubba img {
+  transform: scale(1.2);
+  transition: all 0.5s;
 }
+
+.bubba:hover img {
+  transform: scale(1);
+  opacity: 0.7;
+}
+
+
+.bubba::before{
+    content: "";
+    border-top: 1px #fff solid;
+    border-bottom: 1px #fff solid;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 1;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+
+.bubba::after{
+    content: "";
+    border-left: 1px #fff solid;
+    border-right: 1px #fff solid;
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+    z-index: 1;
+    transform: scaleY(0);
+    transition: all .5s;
+}
+
+.bubba:hover::before{
+    transform: scaleX(1);
+}
+.bubba:hover::after{
+    transform: scaleY(1);
+}
+
+
+.bubba h3{
+    transform: translateY(-20px);
+    transition: all .5s;
+    margin: 0;
+}
+
+.bubba p{
+    transform: translateY(20px);
+    transition: all .5s;
+    opacity: 0;
+}
+
+.bubba:hover h3,
+.bubba:hover p
+{
+    transform: translateY(0);
+    opacity: 1;
+}
+
