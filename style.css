@@ -1,192 +1,21 @@
-/* h1::before{
-    content: "hello";
-    color: red;
-}
-
-h1::after{
-    content: "!";
-} */
-
-h1::after {
-  content: "";
-  display: block;
-  border-top: 1px #ddd solid;
-  width: 100%;
-}
-
-h1 span {
-  position: relative;
-}
-
-h1 span::before {
-  content: "";
-  display: block;
-  border-top: 1px red solid;
-  width: 100px;
-  position: absolute;
-  top: 50%;
-  left: 100%;
-  margin-left: 20px;
-  transform: translateY(-50%);
-}
-
-h1 {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  white-space: nowrap;
-}
-
-/* Bubba */
-
-img {
-  max-width: 100%;
-  /* display: block; */
-}
-
-.bubba {
-
-  background: rgb(129, 255, 0);
-  background: linear-gradient(
-    75deg,
-    rgba(129, 255, 0, 1) 0%,
-    rgba(34, 60, 190, 1) 46%,
-    rgba(209, 0, 141, 1) 100%
-  );
-
-
-  width: 400px;
-  position: relative;
-  overflow: hidden;
-}
-
-.bubba .text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-}
-
-.bubba img {
-  transform: scale(1.2);
-  transition: all 0.5s;
-}
-
-.bubba:hover img {
-  transform: scale(1);
-  opacity: 0.7;
-}
-
-
-.bubba::before{
-    content: "";
-    border-top: 1px #fff solid;
-    border-bottom: 1px #fff solid;
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 20px;
-    bottom: 20px;
-    z-index: 1;
-    transform: scaleX(0);
-    transition: all .5s;
-}
-
-
-.bubba::after{
-    content: "";
-    border-left: 1px #fff solid;
-    border-right: 1px #fff solid;
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    top: 20px;
-    bottom: 20px;
-    z-index: 1;
-    transform: scaleY(0);
-    transition: all .5s;
-}
-
-.bubba:hover::before{
-    transform: scaleX(1);
-}
-.bubba:hover::after{
-    transform: scaleY(1);
-}
-
-
-.bubba h3{
-    transform: translateY(-20px);
-    transition: all .5s;
-    margin: 0;
-}
-
-.bubba p{
-    transform: translateY(20px);
-    transition: all .5s;
-    opacity: 0;
-}
-
-.bubba:hover h3,
-.bubba:hover p
+body
 {
-    transform: translateY(0);
-    opacity: 1;
+  margin: 0;
+  background-image: url('https://cdn.discordapp.com/attachments/1101485089596129281/1180838729284337785/20504570.jpg?ex=657ee0c3&is=656c6bc3&hm=c037c467c37cc50a6ba79425bf9dd1e3fddf40b841deb2212df2cf7b66d60022&');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #ffffff;
 }
-
-.warmoscar {
-  position: relative;
-  overflow: hidden;
-  max-width: 1000px;
+.font
+{
+  font-family: "Victor Mono";
 }
-
-.warmoscar img {
-  display: block;
-  width: 100%;
-  height: auto;
+body
+{
+  background-color: black;
 }
-
-.warmoscar::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 0.2) 50%);
-  background-size: 200% 100%;
-  transition: background-position 0.4s;
-}
-
-.warmoscar:hover::before {
-  background-position: -100% 0;
-}
-
-.additional-text {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  color: #fff;
-  z-index: 2;
-  opacity: 0; /* По умолчанию невидимый */
-  transition: opacity 0.5s; /* Плавное появление */
-}
-.marley {
-  position: relative;
-}
-
-.marley img {
-  max-width: 100%;
-  transition: transform 0.4s;
-}
-
-.marley:hover img {
-  transform: scale(1.1);
-  filter: grayscale(100%);
+h1
+{
+  font-size: 50px;
+  color: white;
 }
