@@ -147,3 +147,25 @@ nav a:hover {
     margin: 5px 0;
   }
 }
+.container2 {
+  display: flex;
+}
+.block {
+  width: 500px;
+  height: 100px;
+  margin: 10px;
+}
+.block1 {
+  margin-left: 52%;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+  padding: 10px;
+  order: 2;
+}
+.block2 {
+  margin-left: -20%;
+  background-color: rgb(236, 236, 236);
+  border-radius: 10px;
+  padding: 10px;
+  order: 1;
+}
