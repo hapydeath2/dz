@@ -1,194 +1,108 @@
 body {
   margin: 0;
-}
-img {
-  max-width: 100%;
-  display: block;
-}
-* {
-  box-sizing: border-box;
-}
-
-.container {
-  padding: 0 15px;
-}
-
-.container-fluid {
-  padding-left: 15px;
-  padding-right: 15px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  gap: 10px;
+  min-height: 100vh;
+  grid-template-areas:
+    "header"
+    "main"
+    "aside-left"
+    "aside-right"
+    "footer";
 }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
+.header,
+.footer,
+.aside-right,
+.aside-left
+{
+  background-color: white;
+  padding: 20px;
+}
+.main {
+  background-color: gray;
+  padding: 20px;
+}
+.header {
+  grid-area: header;
 }
 
-.vertical-gap {
-  row-gap: 30px;
+.footer {
+  grid-area: footer;
 }
 
-[class^="col"] {
-  padding-left: 15px;
-  padding-right: 15px;
+.main {
+  grid-area: main;
 }
 
-.col {
-  flex: 1 0 0;
+.aside-left {
+  grid-area: aside-left;
 }
 
-.col-1 {
-  width: calc(1 * 100% / 12);
-}
-.col-2 {
-  width: calc(2 * 100% / 12);
-}
-.col-3 {
-  width: calc(3 * 100% / 12);
-}
-.col-4 {
-  width: calc(4 * 100% / 12);
-}
-.col-5 {
-  width: calc(5 * 100% / 12);
-}
-.col-6 {
-  width: calc(6 * 100% / 12);
-}
-.col-7 {
-  width: calc(7 * 100% / 12);
-}
-.col-8 {
-  width: calc(8 * 100% / 12);
-}
-.col-9 {
-  width: calc(9 * 100% / 12);
-}
-.col-10 {
-  width: calc(10 * 100% / 12);
-}
-.col-11 {
-  width: calc(11 * 100% / 12);
-}
-.col-12 {
-  width: calc(12 * 100% / 12);
+.aside-right {
+  grid-area: aside-right;
 }
 
-.d-none {
-  display: none;
+.text-right {
+  text-align: right;
 }
 
-.order-first {
-  order: -1;
-}
-.order-last {
-  order: 9999;
-}
-.order-2 {
-  order: 2;
-}
-
-.justify-content-between {
-  justify-content: space-between;
-}
-
-.align-center {
-  align-items: center;
-}
-
-/* md */
 @media screen and (min-width: 768px) {
-
-  .container {
-    width: 70%;
-    margin: auto;
-    padding: 0;
-  }
-
-  .d-md-block {
-    display: block;
-  }
-  .d-md-none {
-    display: none;
-  }
-  .col-md-1 {
-    width: calc(1 * 100% / 12);
-  }
-  .col-md-2 {
-    width: calc(2 * 100% / 12);
-  }
-  .col-md-3 {
-    width: calc(3 * 100% / 12);
-  }
-  .col-md-4 {
-    width: calc(4 * 100% / 12);
-  }
-  .col-md-5 {
-    width: calc(5 * 100% / 12);
-  }
-  .col-md-6 {
-    width: calc(6 * 100% / 12);
-  }
-  .col-md-7 {
-    width: calc(7 * 100% / 12);
-  }
-  .col-md-8 {
-    width: calc(8 * 100% / 12);
-  }
-  .col-md-9 {
-    width: calc(9 * 100% / 12);
-  }
-  .col-md-10 {
-    width: calc(10 * 100% / 12);
-  }
-  .col-md-11 {
-    width: calc(11 * 100% / 12);
-  }
-  .col-md-12 {
-    width: calc(12 * 100% / 12);
+  body {
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 80px 4fr 1fr 80px;
+    grid-template-areas:
+      "header header"
+      "aside-left main"
+      "aside-right aside-right"
+      "footer footer";
   }
 }
 
-/* xl */
-@media screen and (min-width: 1200px) {
-  .d-xl-block {
-    display: block;
+@media screen and (min-width: 1024px) {
+  body {
+    grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 80px 1fr 80px;
+    grid-template-areas:
+      "header header header"
+      "aside-left main aside-right"
+      "footer footer footer";
   }
-  .col-xl-1 {
-    width: calc(1 * 100% / 12);
-  }
-  .col-xl-2 {
-    width: calc(2 * 100% / 12);
-  }
-  .col-xl-3 {
-    width: calc(3 * 100% / 12);
-  }
-  .col-xl-4 {
-    width: calc(4 * 100% / 12);
-  }
-  .col-xl-5 {
-    width: calc(5 * 100% / 12);
-  }
-  .col-xl-6 {
-    width: calc(6 * 100% / 12);
-  }
-  .col-xl-7 {
-    width: calc(7 * 100% / 12);
-  }
-  .col-xl-8 {
-    width: calc(8 * 100% / 12);
-  }
-  .col-xl-9 {
-    width: calc(9 * 100% / 12);
-  }
-  .col-xl-10 {
-    width: calc(10 * 100% / 12);
-  }
-  .col-xl-11 {
-    width: calc(11 * 100% / 12);
-  }
-  .col-xl-12 {
-    width: calc(12 * 100% / 12);
-  }
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  padding: 10px;
+  border-radius: 5px;
+  outline: 1px black;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus
+{
+  outline: 1px green solid;
+}
+
+
+form>div{
+    margin: 10px 0;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+form>div>label{
+   display: block;
+   font-weight: 700; 
+   margin-bottom: 5px;
+}
+
+textarea{
+    resize: vertical;
 }
