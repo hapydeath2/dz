@@ -5,71 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tangerine:wght@400;700&display=swap"
-        rel="stylesheet">
-
-
     <link rel="stylesheet" href="grid.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1><span>M</span>onica & <span>J</span>hon</h1>
-        <h2>Our wedding story</h2>
-
-        <nav>
-            <select class="d-md-none">
-                <option>Lorem.</option>
-                <option>Quas.</option>
-                <option>Ea?</option>
-                <option>Rerum.</option>
-                <option>Accusamus.</option>
-            </select>
-            <div class="menu d-none d-md-block">
-                <a href="">Lorem.</a>
-                <a href="">Nisi!</a>
-                <a href="">Provident!</a>
-                <a href="">Voluptate?</a>
-                <a href="">Quod.</a>
+    <header class="header">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <div class="col-4">Logo</div>
+                <div class="col-4 text-right">(050) 231-45-25</div>
             </div>
-        </nav>
+        </div>
     </header>
-    <div class="container content">
-        <div class="section shadow">
-            <div class="slider">
-                <img src="./images/slide1.jpg" alt="">
 
-                <div class="slider-text">
-                    <h2>Lorem, ipsum.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, suscipit?</p>
-                    <a href="#" class="btn d-none d-md-block">Read more</a>
-                </div>
+    <main class="main">
+
+        <form action="register.php">
+           
+            <div>
+                <label for="username">Username</label>
+                <input type="text" id="username">
             </div>
-        </div>
-    <div class="section">
-        <div class="row">
-            <div class="col-4">
-                <img src="images\cat1_400x322-c.jpg" alt="Image 1">
+
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" id="pass">
             </div>
-            <div class="col-4">
-                <img src="images\slide3.jpg" alt="Image 2">
+
+            <div>
+                <label for="country">Country</label>
+                <select name="country" id="country">
+                    <option value="">Lorem.</option>
+                    <option value="">Nihil!</option>
+                    <option value="">Facilis.</option>
+                </select>
             </div>
-            <div class="col-4">
-                <img src="images\slide2.jpg" alt="Image 3">
+
+            <div>
+                <div><input type="radio" name="gender" id="male"><label for="male">Male</label></div>
+                <div><input type="radio" name="gender" id="female"><label for="female">Female</label></div>
             </div>
-        </div>
-    </div>
-    <div class="section">
-        <div class="row">
-            <div class="container">
-            <div class="block block1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, aliquam.</div>
-            <div class="block block2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, maiores?</div>
-        </div>
-    </div>
+
+            <div>
+                <div><input type="checkbox" id="en"><label for="en">En</label></div>
+                <div><input type="checkbox" id="de"><label for="de">De</label></div>
+                <div><input type="checkbox" id="fr"><label for="fr">Fr</label></div>
+            </div>
+            
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" cols="30" rows="10"></textarea>
+            </div>
+
+            <button>Send</button>
+            <input type="submit" value="Send">
+            <input type="reset" value="Reset">
+            
+        </form>
+        
+        
+
+
+
+    </main>
+
+    <aside class="aside-left"></aside>
+
+    <aside class="aside-right"></aside>
+
+    <footer class="footer"></footer>
 </body>
+
 </html>
